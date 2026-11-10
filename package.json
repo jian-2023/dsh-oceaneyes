@@ -1,0 +1,28 @@
+{
+  "name": "dsh-oceaneyes",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Boot animation + looping video wallpaper for the DSH web GUI (self-contained: videos ship inside the package)",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "media/*.mp4",
+    "locale/*.json",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  }
+}

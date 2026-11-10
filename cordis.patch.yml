@@ -1,0 +1,30 @@
+- insert:
+    - id: wallpaper
+      name: "dsh-oceaneyes"
+      # 不写 mediaDir：默认使用包内自带的 media/ 目录（视频随包分发）。
+      # 想用别的视频目录时，把绝对路径加回来即可，例如：
+      #   config:
+      #     mediaDir: 'D:\我的壁纸'
+      config:
+        bootVideo: video1.mp4
+        loopVideo: video2.mp4
+        splashMs: 1500
+        fadeMs: 450
+        crossfadeMs: 300
+        scrim: 'rgba(8, 14, 28, 0.32)'
+        objectFit: cover
+        panelAlpha: 0.32
+        surfaces: tokens
+        pauseWhenHidden: true
+        audio: true
+        volume: 0.6
+        # ---- blue-wallpaper colour tints ----
+        textTint: '#e8f0fa'
+        textTintSecondary: '#b8c8dc'
+        textTintTertiary: '#8a9ab5'
+        textForeground: '#0c1424'
+        borderTint: 'rgba(100, 140, 200, 0.12)'
+        brandColor: '#4a9ad4'
+        linkColor: '#5ab0f0'
+        buttonPrimaryFill: '#3a6aaa'
+        buttonPrimaryHover: '#4a8ad4'
