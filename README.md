@@ -58,6 +58,25 @@
 > 在 `dsh.profile.bundles` 里加 `"dsh-oceaneyes"`、在 profile `node_modules`
 > 里建指向该目录的 junction。
 
+### 让 AI 助手帮你装（一句话安装）
+
+把这句话发给你的 DSH 助手即可：
+
+> 帮我安装 https://github.com/jian-2023/dsh-oceaneyes 这个壁纸插件
+
+AI 助手的操作步骤（供 agent 参考）：
+
+1. `git clone https://github.com/jian-2023/dsh-oceaneyes`（或从
+   [Releases](../../releases) 下载 `dsh-oceaneyes-<版本>.zip` 解压）；
+2. 以工作区可写权限运行 `powershell.exe -ExecutionPolicy Bypass -File .\install.ps1`
+   （桌面 App 默认 `-Profiles desktop`；也可加 `-Profiles desktop,web`）；
+3. 提示用户**重启 DeepSeek Harness**。验证：重启后页面首帧即为全屏视频，
+   `GET /wallpaper/media/video1.mp4` 返回 200 `video/mp4`。
+4. 卸载：`.\install.ps1 -Remove`，再重启 DSH。
+
+注意：本插件发布形态是 GitHub 仓库 + Release zip，**不在 npm 注册表里**，
+`dsh plugin add` / `install_bundle` 装不到它；请按上面 clone → install.ps1 的路径安装。
+
 ## 装在哪个 profile（关键）
 
 DSH 有**两套** profile，别装错：
