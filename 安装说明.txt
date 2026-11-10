@@ -1,0 +1,24 @@
+dsh-oceaneyes · 开机动画 + 视频壁纸插件（DeepSeek Harness）
+=============================================================
+
+安装（三步）
+  1. 解压本压缩包，保持目录结构完整（install.ps1 和 dsh-oceaneyes\ 在一起）。
+  2. 在解压目录打开 PowerShell，运行：
+         .\install.ps1
+     默认装进桌面 App 的 profile（desktop）。
+     装别的 profile：.\install.ps1 -Profiles desktop,web
+     卸载：            .\install.ps1 -Remove
+  3. 重启 DeepSeek Harness，开机动画即生效。
+
+要求
+  · Windows 10/11 + DeepSeek Harness（桌面 App 或 dsh web 均可）。
+  · 视频编码为 H.264 + AAC（随包文件已是），浏览器才解得动；
+    换成 HEVC 会黑屏，插件会自动跳过开机动画直接进桌面。
+
+临时关掉壁纸（不用卸载）
+  · 地址栏加  ?nowallpaper=1
+  · 或控制台执行  localStorage['dsh-oceaneyes']='off'  后刷新
+
+调整效果
+  · 改 dsh-oceaneyes\cordis.patch.yml 里的 config（时长、透明度、音量等），
+    改完重启 DSH。详细键位说明见 dsh-oceaneyes\README.md。
